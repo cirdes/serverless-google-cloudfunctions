@@ -133,8 +133,8 @@ const getFunctionTemplate = (funcObject, stage, region, sourceArchiveUrl) => { /
       availableMemoryMb: 256,
       runtime: 'nodejs8',
       timeout: '60s',
-      entryPoint: `${stage}-${funcObject.handler}`,
-      function: funcObject.handler,
+      entryPoint: funcObject.handler,
+      function: `${stage}-${funcObject.handler}`,
       sourceArchiveUrl,
     },
   };
